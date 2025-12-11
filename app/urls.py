@@ -21,6 +21,8 @@ from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/process-image/', views.process_image_api, name='process_image_api'),
+    path('api/yolo-model-info/', views.yolo_model_info, name='yolo_model_info'),
     re_path("", views.nextjs_proxy, name='nextjs_proxy'),
     
 ]
